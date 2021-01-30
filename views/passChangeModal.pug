@@ -1,0 +1,18 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form action="/password-change" method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Zmień hasło</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        - var formControls = [{ type: 'password', id: 'pass-current', label: 'Obecne Hasło', name: 'current' }, { type: 'password', id: 'pass-next', label: 'Nowe Hasło', name: 'next' }, { type: 'password', id: 'pass-next2', label: 'Powtórz Obecne Hasło', name: 'next2' }];
+        include formControls.pug
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+        <button type="submit" class="btn btn-primary">Zmień hasło</button>
+      </div>
+    </form>
+  </div>
+</div>

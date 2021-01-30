@@ -1,0 +1,5 @@
+div
+ a(href=`${host}/password-reset?t=${token}`) kliknij, aby zresetować hasło
+ div
+  span link ważny jest do 
+  span= new Date(expiresAt).toLocaleString()

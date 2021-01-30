@@ -1,0 +1,5 @@
+each control in formControls
+ div(class=control.type==='hidden'?'':'mb-3')
+    if control.type !== 'hidden'
+     label(for=control.id).form-label= control.label
+    input(type=control.type name=control.name id=`#${control.id}` value=control.value||"" ).form-control

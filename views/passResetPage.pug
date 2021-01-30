@@ -1,0 +1,10 @@
+doctype html
+include head.pug
+body
+ div.container.pt-4.w-25
+  include alert.pug
+  form(action="/password-change" method="POST")
+   - var formControls = [{ type: 'password', id: 'next', label: 'Nowe Hasło', name: 'next' },{ type: 'password', id: 'next2', label: 'Powtórz Nowe Hasło', name: 'next2' }, { type: 'hidden', id: 'token',  name: 'token', value: resetToken }];
+   include formControls.pug
+   button(type="submit").btn.btn-primary.w-100 zresetuj hasło
+ include scripts.pug

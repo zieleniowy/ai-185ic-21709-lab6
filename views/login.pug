@@ -1,0 +1,26 @@
+doctype html
+include head.pug
+body
+ div.container
+  .row
+   include alert.pug
+   .col-12.col-md-6
+    h2.mt-4 Zaloguj się
+    form(action="/login" method="POST")
+     - var formControls = [{ type: 'email', id: 'email-login', label: 'Adres Email', name: 'username' },{ type: 'password', id: 'pass-login', label: 'Hasło', name: 'password' }];
+     include formControls.pug
+     button(type="button" data-toggle="modal" data-target="#exampleModal").btn.btn-secondary.mr-3 przypomnij hasło
+     button(type="submit").btn.btn-primary zaloguj
+     div 
+      header
+       h3 lub społecznościowo
+      a(href="/auth/facebook").btn.btn-primary.mr-3 z Facebookiem
+      a(href="/auth/google").btn.btn-warning.mr-3 z Google
+   .col-12.col-md-6
+    h2.mt-4 nie masz konta?
+    form(action="/register" method="POST")
+     - var formControls = [{ type: 'email', id: 'email-register', label: 'Adres Email', name: 'email' },{ type: 'password', id: 'pass-register', label: 'Hasło', name: 'password' },{ type: 'password', id: 'pass-register2', label: 'Powtórz Hasło', name: 'password2' }];
+     include formControls.pug
+     button(type="submit").btn.btn-primary zarejestruj się
+ include passResetModal.pug
+ include scripts.pug
